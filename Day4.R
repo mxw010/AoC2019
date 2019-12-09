@@ -3,7 +3,7 @@ numbers <- 246540:787419 #all the numbers
 whichones <- rep(0,length(numbers))  
 for (k in 1:length(numbers)) {
 	i <- numbers[k] #k-th number
-	y <- rep(0,6) #create the 6 digit
+	y <- rep(0,6) #create a 6-digit vector 
 	for (j in 1:6) {
 		y[j] <- trunc((i - y%*%10^(5:0))/10^(6-j))
 	}
@@ -18,7 +18,7 @@ sum(whichones)
 whichones <- rep(0,length(numbers))  
 for (k in 1:length(numbers)) {
 	i <- numbers[k] 
-	y <- rep(0,6) #create the 6 digit
+	y <- rep(0,6) 
 	for (j in 1:6) {
 		y[j] <- trunc((i - y%*%10^(5:0))/10^(6-j))
 	}
